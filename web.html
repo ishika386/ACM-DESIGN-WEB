@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <header class="bg-gradient-to-r from-green-500 to-green-700 text-white py-6">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl font-bold">Welcome to FreshMart Grocery</h1>
+            <p class="text-lg mt-2">Your one-stop shop for fresh groceries</p>
+        </div>
+    </header>
+
+    <nav class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto flex justify-center gap-6">
+            <a href="#categories" class="hover:text-green-300">Categories</a>
+            <a href="#products" class="hover:text-green-300">Products</a>
+            <a href="#offers" class="hover:text-green-300">Offers</a>
+            <a href="#about" class="hover:text-green-300">About Us</a>
+            <a href="#contact" class="hover:text-green-300">Contact</a>
+        </div>
+    </nav>
+
+    <section class="relative bg-cover bg-center h-[400px] flex items-center justify-center text-white" >
+        <div class="text-center bg-black bg-opacity-50 p-8 rounded">
+            <h2 class="text-3xl font-semibold">Fresh Groceries Delivered To Your Doorstep</h2>
+            <p class="text-lg mt-2">Discover the best quality produce at unbeatable prices!</p>
+            <button class="mt-4 px-6 py-2 bg-green-500 hover:bg-green-700 rounded">Shop Now</button>
+        </div>
+    </section>
+
+    <section id="categories" class="py-12 bg-gray-100">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">Our Categories</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <div class="p-6 bg-white shadow rounded"style="background-image:url(fruits.jpg)">Fruits</div>
+                <div class="p-6 bg-white shadow rounded"style="background-image:url(veg.jpg)">Vegetables</div>
+                <div class="p-6 bg-white shadow rounded"style="background-image:url(dairy.jpg)">Dairy</div>
+                <div class="p-6 bg-white shadow rounded"style="background-image:url(snacks.jpg)">Snacks</div>
+                <div class="p-6 bg-white shadow rounded"style="background-image:url(beverage.jpg)">Beverages</div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="offers" class="py-12 bg-gray-100">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">Special Offers</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-6 bg-white shadow rounded">Buy 1 Get 1 Free on Apples</div>
+                <div class="p-6 bg-white shadow rounded">20% Off on Dairy Products</div>
+                <div class="p-6 bg-white shadow rounded">Flat $5 Discount on Orders Above $50</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-12 bg-green-500 text-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">What Our Customers Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <p class="p-6 bg-green-600 shadow rounded">"The freshest fruits I've ever had!" - Ishika choudhary</p>
+                <p class="p-6 bg-green-600 shadow rounded">"Great prices and fast delivery." - Harshita arora</p>
+                <p class="p-6 bg-green-600 shadow rounded">"A wide range of organic options." - Aditi Sachdeva</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-12">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">About Us</h2>
+            <p class="text-lg">FreshMart Grocery has been serving the community with top-quality produce for over 10 years. We pride ourselves on offering fresh and affordable groceries to our valued customers.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="py-12 bg-gray-100">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
+            <p>Email: <a href="mailto:support@freshmart.com" class="text-green-500 hover:underline">support@freshmart.com</a></p>
+            <p>Phone: 123-456-7890</p>
+            <p>Address: 123 Main Street, Rohini , Delhi</p>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 FreshMart Grocery. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
