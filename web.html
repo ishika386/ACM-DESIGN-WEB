@@ -3,90 +3,287 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grocery Store</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Cool Grocery Website</title>
+    
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(90deg, #76b852, #8dc26f);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        section {
+            padding: 3rem;
+            margin: 2rem auto;
+            max-width: 1200px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: white;
+        }
+
+        .home {
+            text-align: center;
+            
+            background:linear-gradient(rgb(57, 26, 26),rgb(101, 48, 59));
+            
+            background-size: cover;
+
+            background-position: center;
+            color: white;
+        }
+
+        .home h2 {
+            font-size: 3.5rem;
+            margin-top: 0;
+        }
+
+        .about {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .about img {
+            width: 50%;
+            border-radius: 10px;
+        }
+
+        .about div {
+            flex: 1;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .product-item {
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 1.5rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-item img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .product-item p {
+            margin: 1rem 0;
+        }
+
+        .product-item button {
+            background: #76b852;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .product-item button:hover {
+            background: #5a9e42;
+        }
+
+        .recipes {
+            text-align: center;
+        }
+
+        .recipes img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-top: 1rem;
+        }
+
+        .deals {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .deal-item {
+            text-align: center;
+            background-color: #e2e8de;
+            color:rgb(18, 2, 2);
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 1.5rem;
+            transition: background 0.3s, box-shadow 0.3s;
+        }
+
+        .deal-item:hover {
+            background: #bffdb4;
+            color:rgba(145, 1, 1, 0.978);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .deal-item h3 {
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+        }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-900">
-    <header class="bg-gradient-to-r from-green-500 to-green-700 text-white py-6">
-        <div class="container mx-auto text-center">
-            <h1 class="text-4xl font-bold">Welcome to FreshMart Grocery</h1>
-            <p class="text-lg mt-2">Your one-stop shop for fresh groceries</p>
-        </div>
+<body>
+    <header>
+        <h1>FreshMart</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#recipes">Recipes</a>
+            <a href="#deals">Deals</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
 
-    <nav class="bg-gray-800 text-white py-4">
-        <div class="container mx-auto flex justify-center gap-6">
-            <a href="#categories" class="hover:text-green-300">Categories</a>
-            <a href="#products" class="hover:text-green-300">Products</a>
-            <a href="#offers" class="hover:text-green-300">Offers</a>
-            <a href="#about" class="hover:text-green-300">About Us</a>
-            <a href="#contact" class="hover:text-green-300">Contact</a>
-        </div>
-    </nav>
+    <section id="home" class="home">
+       <img   src="logo.jpeg" alt="Freshmart"  height="300px" width="1000px">
+        
+    </section>
 
-    <section class="relative bg-cover bg-center h-[400px] flex items-center justify-center text-white" >
-        <div class="text-center bg-black bg-opacity-50 p-8 rounded">
-            <h2 class="text-3xl font-semibold">Fresh Groceries Delivered To Your Doorstep</h2>
-            <p class="text-lg mt-2">Discover the best quality produce at unbeatable prices!</p>
-            <button class="mt-4 px-6 py-2 bg-green-500 hover:bg-green-700 rounded">Shop Now</button>
+    <section id="products" class="products">
+
+        <div class="product-item">
+            <img src="fruits2.jpg" alt="Fruits">
+            <p>Fresh Fruits - Juicy and naturally ripened.</p>
+            <button onclick="cart()">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="vegetable.jpg" alt="Vegetables">
+            <p>Organic Vegetables - Pesticide-free and wholesome.</p>
+            <button onclick="cart()">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="snacks2.jpg" alt="snacks">
+            <p>Snacks - India's first choice.</p>
+            <button onclick="cart()">Add to Cart</button>
+        </div>
+        <div  class="product-item" >
+            <img src="diary 2.jpg" alt="Dairy">
+            <p>Dairy Products - Freshly sourced from farms.</p>
+            <button onclick="cart()">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="grains.jpg" alt="grains">
+            <p>Whole Grain - Nutritious and premium quality.</p>
+            <button onclick="cart()">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="herbs.jpg" alt="Herbs">
+            <p>Fresh Herbs - Aromatic and hand-picked.</p>
+            <button onclick="cart()">Add to Cart</button>
+        </div>
         </div>
     </section>
 
-    <section id="categories" class="py-12 bg-gray-100">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-6">Our Categories</h2>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-                <div class="p-6 bg-white shadow rounded"style="background-image:url(fruits.jpg)">Fruits</div>
-                <div class="p-6 bg-white shadow rounded"style="background-image:url(veg.jpg)">Vegetables</div>
-                <div class="p-6 bg-white shadow rounded"style="background-image:url(dairy.jpg)">Dairy</div>
-                <div class="p-6 bg-white shadow rounded"style="background-image:url(snacks.jpg)">Snacks</div>
-                <div class="p-6 bg-white shadow rounded"style="background-image:url(beverage.jpg)">Beverages</div>
-            </div>
+    <section id="recipes" class="recipes">
+        <h2>Recipes</h2>
+        <p>Discover healthy and delicious recipes made with our fresh ingredients.</p>
+        <img src="recipe.webp" alt="Recipes">
+    </section>
+
+    <section id="deals" class="deals">
+        <h2>Deals & Offers</h2>
+
+        <div class="deal-item">
+            <h3>Deal of the Day</h3>
+            <p>50% off on Fresh Apples!</p>
+            <img src="apples.jpg" alt="Apples">
+        </div>
+        <div class="deal-item">
+            <h3>Weekly Special</h3>
+            <p>Buy 1 Get 1 Free on Organic Carrots.</p>
+            <img src="carrot.jpg" alt="carrot">
+        </div>
+        <div class="deal-item">
+            <h3>Limited Time Offer</h3>
+            <p>20% off on Dairy Products.</p>
+            <img src="diary 2.jpg" alt="dairy">
+        </div>
+        <div class="deal-item">
+            <h3>Exclusive Discount</h3>
+            <p>scratch the QR</p>
+            <img src="QR code.png" alt="QR code">
+
+        </div>
+        <div class="deal-item">
+            <h3>First Delivery</h3>
+            <p>No delivery charges!!</p>
+            <img src="express del.jpg" alt="first delivery">
+
+        </div>
+    </section>
+    <section id="about" class="about">
+        <img src="about us.jpg" alt="About us">
+        <div>
+            <h2>About Us</h2>
+            <p>At FreshMart, we are committed to bringing you the freshest produce directly from local farms. Our mission is to promote healthy living and support sustainable farming.</p>
         </div>
     </section>
 
-
-    <section id="offers" class="py-12 bg-gray-100">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-6">Special Offers</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="p-6 bg-white shadow rounded">Buy 1 Get 1 Free on Apples</div>
-                <div class="p-6 bg-white shadow rounded">20% Off on Dairy Products</div>
-                <div class="p-6 bg-white shadow rounded">Flat $5 Discount on Orders Above $50</div>
-            </div>
-        </div>
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>Have any questions? Reach out to us at <a href="mailto:contact@freshmart.com">contact@freshmart.com</a>.</p>
     </section>
 
-    <section id="testimonials" class="py-12 bg-green-500 text-white">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-6">What Our Customers Say</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <p class="p-6 bg-green-600 shadow rounded">"The freshest fruits I've ever had!" - Ishika choudhary</p>
-                <p class="p-6 bg-green-600 shadow rounded">"Great prices and fast delivery." - Harshita arora</p>
-                <p class="p-6 bg-green-600 shadow rounded">"A wide range of organic options." - Aditi Sachdeva</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="py-12">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-6">About Us</h2>
-            <p class="text-lg">FreshMart Grocery has been serving the community with top-quality produce for over 10 years. We pride ourselves on offering fresh and affordable groceries to our valued customers.</p>
-        </div>
-    </section>
-
-    <section id="contact" class="py-12 bg-gray-100">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
-            <p>Email: <a href="mailto:support@freshmart.com" class="text-green-500 hover:underline">support@freshmart.com</a></p>
-            <p>Phone: 123-456-7890</p>
-            <p>Address: 123 Main Street, Rohini , Delhi</p>
-        </div>
-    </section>
-
-    <footer class="bg-gray-800 text-white py-6">
-        <div class="container mx-auto text-center">
-            <p>&copy; 2024 FreshMart Grocery. All rights reserved.</p>
-        </div>
+    <footer>
+        <p>&copy; 2024 FreshMart. All Rights Reserved.</p>
     </footer>
+    <script>
+        function cart() {
+          alert("Item added to cart!!");
+        }
+        </script>
+        
 </body>
+</html>
